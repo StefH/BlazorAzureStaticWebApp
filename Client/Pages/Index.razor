@@ -2,4 +2,15 @@
 
 <h1>Hello Static Web Apps</h1>
 
+<div style="position: absolute; top: 70px; z-index: 1000;background: white;width: 620px;height: 800px" @onclick="@ToggleByMouse" hidden="@HideGitHub"></div>
+
 <img src="./overview.png" style="width:90%" />
+
+@code {
+    bool HideGitHub = false;
+
+    private void ToggleByMouse(MouseEventArgs e)
+    {
+        HideGitHub = !HideGitHub;
+    }
+}
